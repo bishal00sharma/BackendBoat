@@ -12,8 +12,8 @@ const productRouter = require("./fearures/products/products.router");
 const userRouter = require("./fearures/user/user.router");
 
 
-app.use("/products", verifyToken ,productRouter);
-app.use("/carts", verifyToken , cartRouter);
+app.use("/products",productRouter);
+app.use("/carts", cartRouter);
 app.use("/user",userRouter);
 
 app.get("/", async(req, res)=>{
@@ -26,7 +26,7 @@ app.get("/", async(req, res)=>{
 })
 
 app.listen("8080",  async()=>{
-     await mongoose.connect("mongodb://localhost:27017/boat")
+     await mongoose.connect("mongodb+srv://boat:boat@cluster0.qxuz83w.mongodb.net/test")
     console.log(`Listening on http://localhost:8080`);
 
 })
