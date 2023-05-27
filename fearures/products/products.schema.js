@@ -7,7 +7,7 @@ const productsSchema= new mongoose.Schema({
     star : {  type:String },
     cost : {  type: Number },
     cutcost : {  type: Number },
-    save : {  type:String }
+    savecost : {  type:String }
 })
 const Product = mongoose.model("product",productsSchema);
 module.exports = Product ;

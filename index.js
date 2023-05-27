@@ -26,7 +26,7 @@ app.get("/", async(req, res)=>{
 })
 
 app.listen("8080",  async()=>{
-     await mongoose.connect("mongodb://localhost:27017/boat")
+     await mongoose.connect("mongodb+srv://boat:boat@cluster0.9uowopi.mongodb.net/boatClone")
     console.log(`Listening on http://localhost:8080`);
 
 })
