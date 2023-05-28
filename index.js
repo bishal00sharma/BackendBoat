@@ -13,7 +13,7 @@ const productRouter = require("./fearures/products/products.router");
 const userRouter = require("./fearures/user/user.router");
 
 
-app.use("/products", productRouter);
+app.use("/products", verifyToken ,productRouter);
 app.use("/carts", verifyToken , cartRouter);
 app.use("/user",userRouter);
 
