@@ -7,12 +7,13 @@ const MAIN_KEY ="boat-api"
 const app = express() ;
 app.use(express.json());
 app.use(cors());
+
 const cartRouter = require("./fearures/carts/cart.router");
 const productRouter = require("./fearures/products/products.router");
 const userRouter = require("./fearures/user/user.router");
 
 
-app.use("/products", verifyToken ,productRouter);
+app.use("/products", productRouter);
 app.use("/carts", verifyToken , cartRouter);
 app.use("/user",userRouter);
 
